@@ -13,11 +13,17 @@ export function activate(context: vscode.ExtensionContext) {
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with registerCommand
 	// The commandId parameter must match the command field in package.json
-	const disposable = vscode.commands.registerCommand('formula-generator-support.helloWorld', () => {
+	const disposable = vscode.commands.registerCommand('formula-generator-support.check-formula-generator', () => {
 		// The code you place here will be executed every time your command is executed
 		// Display a message box to the user
 		vscode.window.showInformationMessage('Hello World from Formula Generator Support!');
 	});
+
+	// const test = vscode.languages.registerHoverProvider('formula-generator', {
+	// 	provideHover(document, position, token) {
+	// 	  return new Hover('I am a hover!');
+	// 	}
+	//   })
 
 	context.subscriptions.push(disposable);
 }
